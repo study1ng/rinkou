@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CLEAN MARKUP = GOOD KARMA.
+      Hi source code lover,
+
+      you're a curious person and a fast learner ;)
+      Let's make something beautiful together. Contribute on Github:
+      https://github.com/webslides/webslides
+
+      Thanks,
+      @jlantunez.
+    -->
+
+  <!-- SEO -->
+  <title>標本化, 量子化の具体的な手法について</title>
+  <meta name="description"
+    content="WebSlides is the easiest way to make HTML presentations, portfolios, and landings. Just essential features.">
+
+  <!-- URL CANONICAL -->
+  <!-- <link rel="canonical" href="http://your-url.com/"> -->
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&subset=latin-ext"
+    rel="stylesheet">
+
+  <!-- CSS WebSlides -->
+  <link rel="stylesheet" type='text/css' media='all' href="static/css/webslides.css">
+
+  <!-- Optional - CSS SVG Icons (Font Awesome) -->
+  <link rel="stylesheet" type='text/css' media='all' href="static/css/svg-icons.css">
+
+  <!-- KaTeX CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+
+  <!-- KaTeX JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body);"></script>
+
+  <!-- SOCIAL CARDS (ADD YOUR INFO) -->
+
+  <!-- FACEBOOK -->
+  <meta property="og:url" content="http://your-url.com/"> <!-- YOUR URL -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="WebSlides — Making HTML Presentations Easy"> <!-- EDIT -->
+  <meta property="og:description"
+    content="WebSlides is about telling stories beautifully. Just the essential features. Good karma."> <!-- EDIT -->
+  <meta property="og:updated_time" content="2017-01-04T17:20:50"> <!-- EDIT -->
+  <meta property="og:image" content="static/images/share-webslides.jpg"> <!-- EDIT -->
+
+  <!-- TWITTER -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@webslides"> <!-- EDIT -->
+  <meta name="twitter:creator" content="@jlantunez"> <!-- EDIT -->
+  <meta name="twitter:title" content="WebSlides — Making HTML Presentations Easy"> <!-- EDIT -->
+  <meta name="twitter:description"
+    content="WebSlides is about good karma. Just essential features. 120+ free slides ready to use."> <!-- EDIT -->
+  <meta name="twitter:image" content="static/images/share-webslides.jpg"> <!-- EDIT -->
+
+  <!-- FAVICONS -->
+  <link rel="shortcut icon" sizes="16x16" href="static/images/favicons/favicon.png">
+  <link rel="shortcut icon" sizes="32x32" href="static/images/favicons/favicon-32.png">
+  <link rel="apple-touch-icon icon" sizes="76x76" href="static/images/favicons/favicon-76.png">
+  <link rel="apple-touch-icon icon" sizes="120x120" href="static/images/favicons/favicon-120.png">
+  <link rel="apple-touch-icon icon" sizes="152x152" href="static/images/favicons/favicon-152.png">
+  <link rel="apple-touch-icon icon" sizes="180x180" href="static/images/favicons/favicon-180.png">
+  <link rel="apple-touch-icon icon" sizes="192x192" href="static/images/favicons/favicon-192.png">
+
+  <!-- Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#333333">
+
+</head>
+
+<body>
+  <!-- <header role="banner">
+    <nav role="navigation">
+      <p class="logo"><a href="index.html" title="WebSlides">WebSlides</a></p>
+      <ul>
+        <li class="github">
+          <a rel="external" href="https://github.com/webslides/webslides" title="Github">
+            <svg class="fa-github">
+              <use xlink:href="#fa-github"></use>
+            </svg>
+            <em>WebSlides</em>
+          </a>
+        </li>
+        <li class="twitter">
+          <a rel="external" href="https://twitter.com/webslides" title="Twitter">
+            <svg class="fa-twitter">
+              <use xlink:href="#fa-twitter"></use>
+            </svg>
+            <em>@WebSlides</em>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header> -->
+
+  <main role="main">
+    <article id="webslides" class="vertical">
+      <!-- Quick Guide
+          - Each parent <section> in the <article id="webslides"> element is an individual slide.
+          - Vertical sliding = <article id="webslides" class="vertical">
+          - <div class="wrap"> = container 90% / <div class="wrap size-50"> = 45%;
+        -->
+
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap aligncenter">
+          <h1><strong>標本化, 量子化の具体的な手法について</strong></h1>
+        </div>
+        <div class="wrap alignright">
+          <p class="alignright" style="margin-top: 5em; font-size: 1.3em">
+            発表者: 加藤大侑<br>
+            範囲: pp.21 ~ pp.29
+          </p>
+        </div>
+        <!-- .end .wrap -->
+      </section>
+      <section>
+        <div class="wrap">
+          <h2>
+            標本化
+          </h2>
+        </div>
+        <div class="wrap size-50 aligncenter">
+          <p>
+            \[f_{ij} = \iint\limits_S f(i\Delta x + u, j\Delta y + v)h(u, v) dudv\]
+            \[i, j = 0, \pm 1, \pm 2, ...\]
+          </p>
+          <p>
+            \(h(u, v)\)は画素の濃度値を決めるのに適当な重み関数<br>
+            \(S\)は適当な領域<br>
+            \(\Delta x, \Delta y\)は標本点の間隔(画素の一辺の長さ)である.
+          </p>
+        </div>
+        <!-- .end .wrap -->
+      </section>
+      <section>
+        <div class="wrap size-70">
+          <div class="grid vertical-align">
+            <div class="column" style="flex: 1">
+              <p>\((i\Delta x, j\Delta y)\)を中心とする領域(画素)について, 2次元フィルタ\(h(u, v)\)を使って重みづけをし, 画素の濃度値に変換する.</p>
+            </div>
+            <div class="column" style="flex: 2">
+              <img src="static/images/1.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <h2>重み関数の例</h2>
+          <ul class="flexblock">
+            <li>
+              <div>
+                <h2>
+                  <span>
+                    \( h(u, v) = \begin{cases}
+                    \infty & \text{if } u = v = 0 \\
+                    0 & otherwise
+                    \end{cases} \)
+                  </span><br>
+                  2次元デルタ関数
+                </h2>
+                \(u=v=0\)の時だけ\(\infty\)となる, すなわち標本点の濃度をそのまま画素の濃度値とする疑似関数.
+              </div>
+            </li>
+            <li>
+              <div>
+                <h2>
+                  <span>
+                    \( h(u, v) = \begin{cases}
+                    \frac{c}{\Delta x \Delta y} & \text{if } |u| \leq \frac{\Delta x}{2}, |v| \leq \frac{\Delta y}{2} \\
+                    0 & otherwise \end{cases}\)
+                  </span><br>
+                  2次元方形波
+                </h2>
+                \((i\Delta x, j\Delta y)\)を中心とする画素の濃度値の平均値を定数倍して用いる関数.
+              </div>
+            </li>
+            <li>
+              <div>
+                <h2>
+                  <span>
+                    \( h(u, v) = \begin{cases}
+                    \frac{c}{\Delta x^2} & \text{if } u^2 + v^2 \leq \Delta x^2 \\
+                    0 & otherwise \end{cases}\)
+                  </span><br>
+                  2次元円形波
+                </h2>
+                \((i\Delta x, j\Delta y)\)を中心とする円の濃度値の平均値を定数倍して用いる関数. ただし, \(\Delta x = \Delta y\)とする.
+              </div>
+            </li>
+            <li>
+              <div>
+                <h2>
+                  <span>
+                    \(h(u, v) = \frac{1}{2\pi \sigma^2} exp\{-\frac{u^2 + v^2}{2\sigma^2}\}\)
+                  </span><br>
+                  2次元ガウス関数
+                </h2>
+                \((i\Delta x, j\Delta y)\)を中心として, 外側に行くほど重みが小さくなるように設計された関数. ガウシアンフィルタなどでも用いられる.
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>      
+      <section>
+        <div class="wrap">
+          <h2>2次元標本化定理</h2>
+          <div>
+            空間周波数ペクトラム\(F(u, v)\)は空間周波数(u, v)の振幅を示したもの. \(|u| \lt U \land |v| \lt V\)でない\((u, v)\)に対して\(F(u, v) = 0\)ならば,
+            \[
+            f(x, y) = \sum_{m=-\infty}^{\infty} \sum_{n=-\infty}^{\infty} f(\frac{m\pi}{U}, \frac{n\pi}{V}) \cdot \frac{sinU(x-\frac{m\pi}{U})}{U(x-\frac{m\pi}{U})} \cdot \frac{sinV(y-\frac{n\pi}{V})}{V(y-\frac{n\pi}{V})}
+            \]
+            ここで, \(m, n = 0, \pm 1, \pm 2, ...\)であるので, これらの点での\(f\)を知れば, すなわち, \(\frac{\pi}{U}, \frac{\pi}{V}\)の間隔で
+            標本化すれば, \(f\)を完全に復元できることになる. 
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <h2>量子化</h2>
+          <p>
+            標本化を終えた後の画像の濃度値は連続値であるので, これをデジタル化するために, 
+            \(L_1, L_2, \dots, L_{N}\)の\(N\)個の値のいずれかに変換する.
+            この時の\(N\)を量子化レベル数という.
+            \(T_1 \lt T_2 \lt \dots \lt T_{N-1}\)となる\(N-1\)個の定数を用いて, 変換後の濃度値を\(g\)とすると,
+            \[
+            g = \begin{cases}
+            L_1 & \text{if } f \le T_1 \\
+            L_2 & \text{if } T_1 \lt f \le T_2 \\
+            \dots \\
+            L_{N-1} & \text{if } T_{N-2} \lt f \le T_{N-1} \\
+            L_N & \text{if } T_{N-1} \lt f
+            \end{cases}
+            \]
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <div class="grid">
+            <div class="column">
+              <h2>直線量子化</h2>
+              <p>
+                隣り合う閾値の間隔を等しくして量子化する方法.
+                <br>
+                すなわち, \[\forall i, j \in \{2, 3, ..., N-1\} |T_i - T_{i - 1}| = |T_j - T_{j - 1}|\]である.
+              </p>
+            </div>
+            <div class="column">
+              <h2>非直線量子化</h2>
+              <p>
+                連続濃度値\(f\)について適当な関数(例えば対数関数)\(\phi\)を用いて変換し, 変換後の値に対して直線量子化を施す方法.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <h2>2次元多重画像</h2>
+          <p>
+            2次元デジタル画像が複数枚組になってまとまった情報を表す.
+            新たな添え字\(k\)を用いて, \(\mathbf{F}^k = \{f_{ij}^k\}, \mathbf{F}_k = \{f_{ijk}\}\)のように表す.(\(f_{ijk}\)は\(k\)番目の画像の\(i, j\)番目の画素の濃度値)
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <h2>2次元多重画像の例</h2>
+          <ul class="flexblock">
+            <li style="flex: 1">
+              <div>
+                <h2>
+                  2次元動画像(系列画像)
+                </h2>
+                <p>
+                  \(k\)は時間を表す.
+                </p>
+              </div>
+            </li>
+            <li style="flex: 1">
+              <div>
+                <h2>
+                  カラー画像
+                </h2>
+                <p>
+                  \(k\)は色(RGB)に対応する.
+                </p>
+              </div>
+            </li>
+            <li style="flex: 1">
+              <div>
+                <h2>
+                  投影図
+                </h2>
+                <p>
+                  \(k\)は平面図, 立面図, 側面図に対応する.
+                </p>
+              </div>
+            </li>
+            <li style="flex: 1">
+              <div>
+                <h2>
+                  マルチスペクトル画像
+                </h2>
+                <p>
+                  可視光の外の領域の電磁波も記録した画像. 異なる\(k\)は異なるセンサに対応する.
+                </p>
+              </div>
+            </li>
+            <li style="flex: 1">
+              <div>
+                <h2>
+                  ステレオ画像
+                </h2>
+                <p>
+                  \(k\)は左目, 右目に対応する.
+                </p>
+              </div>
+            </li>
+            <li style="flex: 1">
+              <div>
+                <h2>
+                  多視点画像
+                </h2>
+                <p>
+                  \(k\)は視点に対応する.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </article>
+    <!-- end article -->
+  </main>
+  <!-- end main -->
+
+  <!-- A global footer
+
+     <footer role="contentinfo">
+      <div class="wrap">
+        <p>An <a href="https://github.com/webslides/webslides">open source solution</a>, by <a href="https://twitter.com/webslides">@webslides</a>.</p>
+      </div>
+    </footer>  -->
+
+  <!-- Required -->
+  <script src="static/js/webslides.js"></script>
+  <script>
+    window.ws = new WebSlides();
+  </script>
+
+  <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+  <script defer src="static/js/svg-icons.js"></script>
+
+</body>
+
+</html>
