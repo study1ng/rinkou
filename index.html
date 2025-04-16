@@ -114,15 +114,14 @@
       <section>
         <!--.wrap = container (width: 90%) -->
         <div class="wrap aligncenter">
-          <a href="https://study1ng.github.io/rinkou/">
-            <h1><strong>標本化, 量子化の具体的な手法について</strong></h1>
-          </a>
+          <h1><strong>標本化, 量子化の具体的な手法について</strong></h1>
         </div>
         <div class="wrap alignright">
           <p class="alignright" style="margin-top: 5em; font-size: 1.3em">
             発表者: 加藤大侑<br>
-            範囲: pp.21 ~ pp.29
+            範囲: pp.21 ~ pp.29 <br>
           </p>
+          <p></p>
         </div>
         <!-- .end .wrap -->
       </section>
@@ -214,17 +213,19 @@
             </li>
           </ul>
         </div>
-      </section>      
+      </section>
       <section>
         <div class="wrap">
           <h2>2次元標本化定理</h2>
           <div>
-            空間周波数ペクトラム\(F(u, v)\)は空間周波数(u, v)の振幅を示したもの. \(|u| \lt U \land |v| \lt V\)でない\((u, v)\)に対して\(F(u, v) = 0\)ならば,
+            空間周波数ペクトラム\(F(u, v)\)は空間周波数(u, v)の振幅を示したもの. \(|u| \lt U \land |v| \lt V\)でない\((u, v)\)に対して\(F(u, v) =
+            0\)ならば,
             \[
-            f(x, y) = \sum_{m=-\infty}^{\infty} \sum_{n=-\infty}^{\infty} f(\frac{m\pi}{U}, \frac{n\pi}{V}) \cdot \frac{sinU(x-\frac{m\pi}{U})}{U(x-\frac{m\pi}{U})} \cdot \frac{sinV(y-\frac{n\pi}{V})}{V(y-\frac{n\pi}{V})}
+            f(x, y) = \sum_{m=-\infty}^{\infty} \sum_{n=-\infty}^{\infty} f(\frac{m\pi}{U}, \frac{n\pi}{V}) \cdot
+            \frac{sinU(x-\frac{m\pi}{U})}{U(x-\frac{m\pi}{U})} \cdot \frac{sinV(y-\frac{n\pi}{V})}{V(y-\frac{n\pi}{V})}
             \]
             ここで, \(m, n = 0, \pm 1, \pm 2, ...\)であるので, これらの点での\(f\)を知れば, すなわち, \(\frac{\pi}{U}, \frac{\pi}{V}\)の間隔で
-            標本化すれば, \(f\)を完全に復元できることになる. 
+            標本化すれば, \(f\)を完全に復元できることになる.
           </div>
         </div>
       </section>
@@ -232,7 +233,7 @@
         <div class="wrap">
           <h2>量子化</h2>
           <p>
-            標本化を終えた後の画像の濃度値は連続値であるので, これをデジタル化するために, 
+            標本化を終えた後の画像の濃度値は連続値であるので, これをデジタル化するために,
             \(L_1, L_2, \dots, L_{N}\)の\(N\)個の値のいずれかに変換する.
             この時の\(N\)を量子化レベル数という.
             \(T_1 \lt T_2 \lt \dots \lt T_{N-1}\)となる\(N-1\)個の定数を用いて, 変換後の濃度値を\(g\)とすると,
@@ -273,7 +274,8 @@
           <h2>2次元多重画像</h2>
           <p>
             2次元デジタル画像が複数枚組になってまとまった情報を表す.
-            新たな添え字\(k\)を用いて, \(\mathbf{F}^k = \{f_{ij}^k\}, \mathbf{F}_k = \{f_{ijk}\}\)のように表す.(\(f_{ijk}\)は\(k\)番目の画像の\(i, j\)番目の画素の濃度値)
+            新たな添え字\(k\)を用いて, \(\mathbf{F}^k = \{f_{ij}^k\}, \mathbf{F}_k =
+            \{f_{ijk}\}\)のように表す.(\(f_{ijk}\)は\(k\)番目の画像の\(i, j\)番目の画素の濃度値)
           </p>
         </div>
       </section>
@@ -372,7 +374,7 @@
               動画像における対象物の動きの分析.
             </li>
             <li>
-              多重画像における対象物の対応付け. 
+              多重画像における対象物の対応付け.
             </li>
             <li>
               立体視などによる3次元空間の距離情報の取得.
