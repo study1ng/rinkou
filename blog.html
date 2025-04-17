@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<!-- KaTeX CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+
+<!-- KaTeX JS -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body);"></script>
+
+<div>
+    <h2>はじめに</h2>
+    <p>
+        輪講で発表することになり, その資料をまとめていたら急に畳み込み積分を理解した気がするのでこの記事を書きました。これをそのまま
+        発表する気なので詳しい人間違ってるとこあったら恥かく前に教えてね。
+    </p>
+    <h2>前提知識</h2>
+    <p>
+        一次元だといい感じの例が思いつかないので二次元で考えます. <br>
+        二次元関数\(f(x, y): \mathbb{R}^2 \rightarrow \mathbb{R}\)を考えます. <br>
+        二次元における畳み込みは一次元同様\[(h*f)(x, y) = \iint\limits_S f(x-u, y-v)h(u, v)dudv\]で定義されます.
+    </p>
+    <h2>説明</h2>
+    <p>
+        まず畳み込み積分の定義で\(f\)の中身が\((x-u, y-v)\)になっているのがめっちゃ気持ち悪いですよね. なぜ\((u, v)\)を引くのか意味わからないです.
+        そこで, \(h(u, v) \leftarrow h(-u, -v), S \leftarrow -S = \{(-u, -v) | (u, v) \in S\}\)と置き換えます. <br>
+        \[(h*f)(x, y) = \iint\limits_{S} f(x+u, y+v)h(u, v)dudv\] <br>
+        これを言葉で説明するなら, \(f(x, y)\)という関数に対して, \(h(u, v)\)という重みによって平均付けをし, その値を変換後の値としているのです. <br>
+        この場合, \(f(x+u, y+v)\)というのは\((x, y)\)を中心に\((u, v)\)だけ平行移動したところにある\(f\)の値を参照しています. <br>
+        見方を変えれば, \(h\)というフィルタをかけているともいえるでしょう. <br>
+        画像処理をやったことがある人なら\[\frac{1}{9}\begin{pmatrix}1 & 1 & 1 \\ 1 & 1 & 1 \\ 1 & 1 &
+        1\end{pmatrix}\]のようなフィルタを見たことがあるかもしれません. <br>
+        畳み込み積分というのはこれの連続バージョンで, Sを\((x, y)\)縦1, 横1の正方形だとした場合, 
+        \[h = 1\]という
+    </p>
+</div>
