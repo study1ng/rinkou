@@ -177,33 +177,6 @@
         </div>
       </section>
       <section>
-        <div class="wrap size-70">
-          <h2>2次元畳み込み積分との類似性</h2>
-          <p>
-            \(S' = -S = \{(-u, -v) | (u, v) \in S\}, h'(u, v) = h(-u, -v)\)という変換によって,
-            \[
-            \begin{align*}
-            f_{ij} &= \iint\limits_{S} f(i\Delta x + u, j\Delta y + v)h(u, v) dudv \\
-            &= \iint\limits_{S'} f(i\Delta x - u, j\Delta y - v)h'(u, v) dudv \\ 
-            &= (h' * f)(i\Delta x, h\Delta y)
-            \end{align*}
-            \]
-            となる. 
-          </p>
-        </div>
-      </section>
-      <section>
-        <div class="wrap size-70">
-          <h2>周波数領域での影響</h2>
-          <p>
-            \[
-            \mathcal{F}((h' * f)) = \mathcal{F}(h') \cdot \mathcal{F}(f)
-            \]
-            より, \(h\)に適切な関数を選ぶことで, 高周波数成分を除去しての標本化が可能.
-          </p>
-        </div>
-      </section>
-      <section>
         <div class="wrap">
           <h2>重み関数の例</h2>
           <ul class="flexblock" style="min-width:0;">
@@ -287,6 +260,33 @@
             </figure>
             <p>これを解決するためには, あらかじめナイキスト間隔と一致する周波数より高い周波数の成分を取り除いておく.</p>
           </div>
+        </div>
+      </section>
+      <section>
+        <div class="wrap size-70">
+          <h2>2次元畳み込み積分との類似性</h2>
+          <p>
+            \(S' = -S = \{(-u, -v) | (u, v) \in S\}, h'(u, v) = h(-u, -v)\)という変換によって,
+            \[
+            \begin{align*}
+            f_{ij} &= \iint\limits_{S} f(i\Delta x + u, j\Delta y + v)h(u, v) dudv \\
+            &= \iint\limits_{S'} f(i\Delta x - u, j\Delta y - v)h'(u, v) dudv \\ 
+            &= (h' * f)(i\Delta x, h\Delta y)
+            \end{align*}
+            \]
+            となる. 
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="wrap size-70">
+          <h2>周波数領域での影響</h2>
+          <p>
+            \[
+            \mathcal{F}((h' * f)) = \mathcal{F}(h') \cdot \mathcal{F}(f)
+            \]
+            より, \(h\)に適切な関数を選ぶことで, 高周波数成分を除去しての標本化が可能.
+          </p>
         </div>
       </section>
       <section>
