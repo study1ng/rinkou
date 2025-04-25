@@ -238,7 +238,7 @@
         <div class="wrap">
           <h2>2次元標本化定理</h2>
           <div>
-            空間周波数ペクトラム\(F(u, v)\)は空間周波数(u, v)の振幅を示したもの. \(|u| \lt U \land |v| \lt V\)でない\((u, v)\)に対して\(F(u, v) =
+            空間周波数ペクトラムの絶対値\(|F(u, v)|\)は空間周波数\((u, v)\)の振幅を示したもの. \(|u| \lt U \land |v| \lt V\)でない\((u, v)\)に対して\(F(u, v) =
             0\)ならば,
             \[
             f(x, y) = \sum_{m=-\infty}^{\infty} \sum_{n=-\infty}^{\infty} f(\frac{m\pi}{U}, \frac{n\pi}{V}) \cdot
@@ -247,6 +247,9 @@
             ここで, \(m, n = 0, \pm 1, \pm 2, ...\)であるので, これらの点での\(f\)を知れば, すなわち, \(\frac{\pi}{U}, \frac{\pi}{V}\)の間隔で
             標本化すれば, \(f\)を完全に復元できることになる.
           </div>
+          <p>
+            周波数成分のうち, 最も波長が短い周波数成分の波長の半分以下の間隔で標本点をとる. 
+          </p>
         </div>
       </section>
       <section>
@@ -288,6 +291,25 @@
             より, \(h\)に適切な関数を選ぶことで, 高周波数成分を除去しての標本化が可能.
           </p>
         </div>
+      </section>
+      <section>
+        <!-- <div class="wrap size-70">
+          <h2>ピラミッド構造</h2>
+          <p>
+            # ピラミッド構造
+            - 画像ピラミッド
+            - ガウシアンピラミッド
+            - https://docs.opencv.org/4.x/dc/dff/tutorial_py_pyramids.html
+            # 二次標本化
+            - resampling
+            - 補間法
+            - クロマ・サブサンプリング
+              - jpegの符号化に利用
+              - 輝度情報(Y)を維持し, 色差情報(Cb, Cr)の解像度を落とす. 
+            # 二次量子化
+            - ヒストグラム均等化
+          </p>
+        </div> -->
       </section>
       <section>
         <div class="wrap">
