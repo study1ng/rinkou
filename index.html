@@ -166,9 +166,11 @@
       </section>
       <section>
         <div class="wrap size-70">
+          \[f_{ij} = \iint\limits_S f(i\Delta x + u, j\Delta y + v)h(u, v) dudv\]
           <div class="grid vertical-align">
             <div class="column" style="flex: 1">
-              <p>\((i\Delta x, j\Delta y)\)を中心とする領域(画素)について, 2次元フィルタ\(h(u, v)\)を使って重みづけをし, 画素の濃度値に変換する.</p>
+              <p>
+                \((i\Delta x, j\Delta y)\)を中心とする領域(画素)について, 2次元フィルタ\(h(u, v)\)を使って重みづけをし, 画素の濃度値に変換する.</p>
             </div>
             <div class="column" style="flex: 2">
               <img src="static/images/1.svg" alt="">
@@ -238,8 +240,8 @@
         <div class="wrap">
           <h2>2次元標本化定理</h2>
           <div>
-            空間周波数ペクトラムの絶対値\(|F(u, v)|\)は空間周波数\((u, v)\)の振幅を示したもの. \(|u| \lt U \land |v| \lt V\)でない\((u, v)\)に対して\(F(u, v) =
-            0\)ならば,
+            空間周波数ペクトラム\(F(u, v)\)は空間周波数\((u, v)\)の成分の振幅や位相を示したもの. <br>
+            \(|u| \lt U \land |v| \lt V\)でない\((u, v)\)に対して\(F(u, v) = 0\)ならば,
             \[
             f(x, y) = \sum_{m=-\infty}^{\infty} \sum_{n=-\infty}^{\infty} f(\frac{m\pi}{U}, \frac{n\pi}{V}) \cdot
             \frac{sinU(x-\frac{m\pi}{U})}{U(x-\frac{m\pi}{U})} \cdot \frac{sinV(y-\frac{n\pi}{V})}{V(y-\frac{n\pi}{V})}
@@ -248,7 +250,7 @@
             標本化すれば, \(f\)を完全に復元できることになる.
           </div>
           <p>
-            周波数成分のうち, 最も波長が短い周波数成分の波長の半分以下の間隔で標本点をとる. 
+            周波数成分のうち, 最も波長が短い周波数成分の波長の半分以下の間隔で標本点をとる.
           </p>
         </div>
       </section>
@@ -269,15 +271,15 @@
         <div class="wrap size-70">
           <h2>2次元畳み込み積分との類似性</h2>
           <p>
-            \(S' = -S = \{(-u, -v) | (u, v) \in S\}, h'(u, v) = h(-u, -v)\)という変換によって,
+            hを空間反転させ, \(S' = -S = \{(-u, -v) | (u, v) \in S\}, h'(u, v) = h(-u, -v)\)という変換によって,
             \[
             \begin{align*}
             f_{ij} &= \iint\limits_{S} f(i\Delta x + u, j\Delta y + v)h(u, v) dudv \\
-            &= \iint\limits_{S'} f(i\Delta x - u, j\Delta y - v)h'(u, v) dudv \\ 
+            &= \iint\limits_{S'} f(i\Delta x - u, j\Delta y - v)h'(u, v) dudv \\
             &= (h' * f)(i\Delta x, h\Delta y)
             \end{align*}
             \]
-            となる. 
+            となる.
           </p>
         </div>
       </section>
@@ -293,12 +295,29 @@
         </div>
       </section>
       <section>
+        <div class="aligncenter">
+
+          <div class="grid vertical-align">
+            <div class="column">
+              <img src="static/images/easymoza-example-high-resolution.jpg" alt="">
+            </div>
+            <div class="column">
+              <img src="static/images/b.jpg" alt="">
+            </div>
+          </div>
+          <p>
+            低解像度は全体の構造をよく保存する。
+          </p>
+        </div>
+      </section>
+      <section>
         <!-- <div class="wrap size-70">
           <h2>ピラミッド構造</h2>
           <p>
             # ピラミッド構造
             - 画像ピラミッド
             - ガウシアンピラミッド
+            - 
             - https://docs.opencv.org/4.x/dc/dff/tutorial_py_pyramids.html
             # 二次標本化
             - resampling
@@ -332,6 +351,11 @@
         </div>
       </section>
       <section>
+        <div class="wrap aligncenter">
+          <img src="static/copyright/gijirinkaku.jpeg" style="max-width: 50vw; max-height: 70vh">
+        </div>
+      </section>
+      <section>
         <div class="wrap">
           <div class="grid">
             <div class="column">
@@ -352,6 +376,26 @@
             </div>
           </div>
         </div>
+      </section>
+      <section>
+        <div class="aligncenter">
+          <div class="grid vertical-align">
+            <div class="column">
+              <img src="static/images/black.jpg" alt="">
+            </div>
+            <div class="column">
+              <img src="static/images/eq.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="aligncenter">
+          <img src="static/images/hist.png" alt="">
+        </div>
+      </section>
+      <section>
+
       </section>
       <section>
         <div class="wrap">
